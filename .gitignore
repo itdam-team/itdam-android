@@ -22,3 +22,7 @@ node_modules/
 keystore.properties
 *.jks
 *.keystore
+
+# Firebase config (CI에서 비밀값으로 주입)
+google-services.json
+GoogleService-Info.plist
