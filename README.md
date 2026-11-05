@@ -30,3 +30,27 @@ Use the run button in your IDE's editor gutter, or run tests using Gradle tasks:
 
 - Android tests: `./gradlew :sharedUI:testAndroidHostTest :sharedLogic:testAndroidHostTest`
 - iOS tests: `./gradlew :sharedLogic:iosSimulatorArm64Test`
+---
+## 📌 브랜치 전략
+
+| 브랜치 | 용도 | 병합 대상 |
+|--------|------|------|
+| `main` | 앱스토어 출시용 | — |
+| `release` | 출시 준비 | `main`, `develop` |
+| `hotfix` | 배포 버전 버그 수정 | `main`, `develop` |
+| `develop` | 개발 완료 | `release` |
+| `feature` | 기능 개발 | `develop` |
+| `fix` | 버그 수정 | `develop` |
+| `refactor` | 코드 리팩토링 | `develop` |
+| `chore` | 빌드, 패키지 등 기타 작업 | `develop` |
+
+## 📌 커밋 컨벤션
+
+| 태그 | 설명 |
+|------|------|
+| `feat` | 새로운 기능 추가 |
+| `fix` | 버그 수정 |
+| `chore` | 빌드, 패키지 등 기타 작업 |
+| `refactor` | 코드 리팩토링 |
+| `docs` | 문서 수정 |
+| `test` | 테스트 코드 작성·수정|
